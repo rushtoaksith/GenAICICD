@@ -34,7 +34,7 @@ jobs:
         # Save the git patch for the PR into a file
         git fetch origin ${{ github.base_ref }}:${{ github.base_ref }} || true
         git diff origin/${{ github.base_ref }}...HEAD > pr_diff.patch || true
-        echo "=== DIFF START ==="
+        echo "==== DIFF START ===="
         head -n 50 pr_diff.patch || true
         echo "=== DIFF END ==="
 

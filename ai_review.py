@@ -2,7 +2,7 @@
 import openai, os, sys
 
 def main():
-    openai.api_key = ${{ secrets.OPENAI_API_KEY }}
+    openai.api_key = os.getenv("OPENAI_API_KEY")
     diff_file = sys.argv[1] if len(sys.argv) > 1 else "diff.txt"
 
     with open(diff_file, "r") as f:
